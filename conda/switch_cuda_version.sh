@@ -9,10 +9,10 @@ then
     echo "folder $CUDA_DIR not found to switch"
 fi
 
-echo "Switching symlink to $CUDA_DIR"
-mkdir -p /usr/local
-rm -fr /usr/local/cuda
-ln -s "$CUDA_DIR" /usr/local/cuda
+#echo "Switching symlink to $CUDA_DIR"
+#mkdir -p /usr/local
+#rm -fr /usr/local/cuda
+#ln -s "$CUDA_DIR" /usr/local/cuda
 
 if [[ "$OSTYPE" == "msys" ]]; then
     export CUDA_VERSION=`ls /usr/local/cuda/bin/cudart64*.dll | head -1 | tr '._' ' ' | cut -d ' ' -f2`
