@@ -11,7 +11,6 @@ curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh -b -p $MINICONDA_HOME
 export PATH=$MINICONDA_HOME/bin/:$PATH
 
-scl enable devtoolset-7 bash
 cd builder/conda
 export PYTORCH_FINAL_PACKAGE_DIR=$BUILD_DIR/artifacts
 export DESIRED_PYTHON=3.7
