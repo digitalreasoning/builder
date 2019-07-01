@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+
 log_msg () {
     echo
     echo "[`date`] - BUILD SCRIPT - $1"
@@ -18,6 +19,7 @@ export DESIRED_PYTHON=3.7
 export TORCH_CONDA_BUILD_FOLDER=pytorch-1.0.1
 export PYTORCH_REPO=pytorch
 export PYTORCH_BRANCH=v1.0.1
+source scl_source enable devtoolset-7
 conda install -y conda-build=3.16
 ./build_pytorch.sh 100 1.0.1 1 # cuda 10.0 pytorch 1.0.1 build_number 1
 
