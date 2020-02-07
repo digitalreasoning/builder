@@ -20,5 +20,5 @@ export TORCH_CONDA_BUILD_FOLDER=pytorch-1.2.0
 export PYTORCH_REPO=pytorch
 export PYTORCH_BRANCH=v1.2.0
 source scl_source enable devtoolset-7
-conda install -y conda-build=3.16
+conda install -y conda-build=3.18
 ./build_pytorch.sh 100 1.2.0 1 # cuda 10.0 pytorch 1.0.1 build_number 1
